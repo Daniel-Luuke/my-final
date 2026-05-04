@@ -8,13 +8,19 @@ header{
 }
 
 .header h1{
-    align-items: first baseline;
+  margin: 0;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items:center;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
 }
 
 #img-tree{

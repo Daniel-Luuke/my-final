@@ -23,4 +23,15 @@ header a{
 }
 body{
     background-color: black;
+    margin: 0;
+  padding: 0;
+  line-height: 1.2;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#section-1{
+    background-color: rgb(151, 154, 156);
+    padding: 15px;
+    border-radius: 5%;
+    margin: 5px;
 }

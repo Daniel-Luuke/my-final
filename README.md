@@ -1,5 +1,5 @@
 (WIP)
-# Akan Name Generator
+# Savannah Bookings
 #### Displays a user's Akan based on their date of birth, v1.0
 #### By Daniel Mungaithi
 ##Description

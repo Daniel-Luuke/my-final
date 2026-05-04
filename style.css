@@ -6,11 +6,18 @@ header{
     background-size: cover;
     
 }
+
 header a{
  text-decoration: none;
     color: #e10909;
     font-size: 24px;
     font-weight: bold;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 #img-tree{
@@ -21,6 +28,7 @@ header a{
     display: flex;
 
 }
+
 body{
     background-color: black;
     margin: 0;
@@ -32,16 +40,35 @@ body{
 section{
     background-color: rgb(151, 154, 156);
  border-radius: 8xp;
-  margin: 1px 160px auto;
+  margin: 1px 10px auto;
   border-radius: 10px;
   max-width: 1000px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease;
   padding: 5px 200px;
 }
+
 section h2{
     text-align: center;
 }
+
+.menu {
+  display: flex;
+  list-style: none;
+}
+.menu-li {
+  margin-left: 20px;
+}
+.menu-li a {
+  color: rgba(216, 160, 17, 0.95);
+  text-decoration: none;
+}
+
+nav {
+  text-align: right;
+  padding: 12px;
+}
+
 nav a {
   text-decoration: none;
   color: white;
@@ -49,7 +76,8 @@ nav a {
   font-weight: 600;
   letter-spacing: 0.5px;
 }
+
 nav a:hover {
-  color: #4d4645;
+  color: #86605a;
   text-decoration: underline;
 }

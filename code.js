@@ -15,6 +15,13 @@ button.addEventListener("click", (event) => {
   const email = document.querySelector("#email").value;
   const message = document.querySelector("#message").value;
 
+  
+  if (!fullName || email|| message) {
+    resultParagraph.textContent = "Please fill in all fields.";
+    return;
+  }
+
   h1.textContent = fullName;
   headerParagraph.textContent = message;
+  resultParagraph.textContent = "Your message has been sent succesfully";
 });

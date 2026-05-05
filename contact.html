@@ -7,6 +7,49 @@
     <title>Contact Us</title>
 </head>
 <body>
-    
+
+    <header class="header"> 
+
+     <!-- website name -->
+      <div class="logo">
+       <img id="img-tree" src="tree.webp" alt="acacia tree"/>
+       <h1>Savannah Bookings</h1>
+      </div>
+
+      <!-- navigation panel -->
+    <nav>
+        <ul class="menu">
+          <li class="menu-li">
+            <a href="index.html">Home</a>
+          </li>
+         <li class="menu-li">
+            <a href="bookings.html">Book Now</a>
+          </li>
+        </ul>
+      </nav>
+   </header> 
+
+    <section>
+      <h2 id="contact">If you have any feedback, inquiries or compaints regarding our services, offers or the website feel free to voice them in the contatct sheet below
+        with your name and email and our team will reach out to you within 5 businessdays with a response
+      </h2>
+      <!-- contact form -->
+      <form>
+        <label for="full-name">Name:</label><br>
+        <input type="text" id="full-name" name="full-name" /><br><br>
+
+        <!-- email form -->
+         <label for="email">Email:</label><br>
+         <input type="email" id="email" email="email" /><br><br>
+
+        <!-- message input -->
+         <label for="message">Message:</label><br>
+         <textarea name="message" id="message" rows="5"></textarea><br><br>
+         <button type="submit"
+         id = "submit-button">Send</button>
+
+      </form>
+    </section>
+    <script src="code.js" defer></script>
 </body>
 </html>

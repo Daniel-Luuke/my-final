@@ -1,3 +1,4 @@
+
 // hotel options
 const hotels = {
   domestic: ["Nairobi Serena", "Sarova Stanley", "Voyager Beach Resort"],
@@ -6,6 +7,7 @@ const hotels = {
 
 function updateHotels() {
   let type = document.getElementById("hotelType").value;
+
   let select = document.getElementById("hotelSelect");
 
   select.innerHTML = '<option value="">--Select a hotel--</option>';
@@ -18,7 +20,6 @@ function updateHotels() {
     selectedHotels = hotels.international;
   } else {
     return;
-    populateDropdown("hotelSelect", hotels[type]);
   }
 
   selectedHotels.forEach((hotel) => {
@@ -32,6 +33,8 @@ function updateHotels() {
 function bookHotel(event) {
 event.preventDefault();
 
+  let type = document.getElementById("hotelType").value;
+  let hotel = document.getElementById("hotelSelect").value;
   let checkin = document.getElementById("checkin").value;
   let checkout = document.getElementById("checkout").value;
 
@@ -46,5 +49,17 @@ event.preventDefault();
     return;
   }
 
+  const booking = {
+    type,
+    hotel,
+    checkin,
+    checkout,
+  };
+
+  localStorage.setItem("booking", JSON.stringify(booking));
+
   document.getElementById("message").innerText = "Booking successful!";
 }
+
+
+console.log("HOTELS OBJECT:", hotels);

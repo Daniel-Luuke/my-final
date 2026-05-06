@@ -26,12 +26,12 @@
         </ul>
       </nav>
     </header>
-
+    <h2 id="booking">Book your next trip with us!</h2>
     <section>
       <form onsubmit="bookHotel(event)">
         <!-- Hotel Type -->
         <label>Select Hotel Type:</label>
-        <select id="hotelType">
+        <select id="hotelType" onchange="updateHotels()">
           <option value="">--Choose--</option>
           <option value="domestic">Domestic</option>
           <option value="international">International</option>
@@ -59,7 +59,7 @@
         <br /><br />
 
         <!-- Book Button -->
-        <button onclick="bookHotel()">Book Now</button>
+        <button type="submit">Book Now</button>
       </form>
         <p id="message"></p>
       

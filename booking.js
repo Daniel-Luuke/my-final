@@ -26,9 +26,9 @@ function updateHotels() {
   let selectedHotels = [];
 
   if (type === "domestic") {
-    selectedHotels = domesticHotels;
+    selectedHotels = hotels.domestic;
   } else if (type === "international") {
-    selectedHotels = internationalHotels;
+    selectedHotels = hotels.international;
   } else {
     return;
   }
@@ -41,7 +41,9 @@ function updateHotels() {
   });
 }
 
-function bookHotel() {
+function bookHotel(event) {
+event.preventDefault();
+
   let checkin = document.getElementById("checkin").value;
   let checkout = document.getElementById("checkout").value;
 
@@ -56,5 +58,5 @@ function bookHotel() {
     return;
   }
 
-  document.getElementById("message").innerText = "Booking successful! 🎉";
+  document.getElementById("message").innerText = "Booking successful!";
 }

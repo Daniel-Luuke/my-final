@@ -1,13 +1,13 @@
 #(WIP)
 # Savannah Bookings
 
-#### Displays a user's Akan based on their date of birth, v1.0
+#### A website for users to book hotels within and outside the country
 
 #### By Daniel Mungaithi
 
 ##Description
-This webpage gives a short history on the origin of the Akan naming sysytem and allows users to input their birthdays to know their Akan name.
-The user inputs his/her gender, date, month and year of birth. once entered, the user clicks "results" and the webpage calculates and generates and Akan name based on the information provided.
+This website is an example of a hotel booking website where a user can view the available hotels. once they make a choice, they go to the booking webpage where they enter the hotel they wish to stay in, the checkin date and tyhe checkout date. Once they have succesfully booked a room, it displays the total amount.
+if the user has feedback ,inquiries or complaints, there is contact page they can use.
 
 ## Setup
 If you wish to use this webpage, follow these intructions:

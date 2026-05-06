@@ -33,7 +33,7 @@ header{
 }
 
 body{
-    background-image: url(beach2.webp);
+    background-color: rgba(38, 0, 255, 0.603);
     image-rendering: auto;
     background-size: cover;
     margin: 0;

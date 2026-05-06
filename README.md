@@ -1,30 +1,30 @@
-#(WIP)
+
 # Savannah Bookings
 
 #### A website for users to book hotels within and outside the country
 
 #### By Daniel Mungaithi
 
-##Description
+## Description
 This website is an example of a hotel booking website where a user can view the available hotels. once they make a choice, they go to the booking webpage where they enter the hotel they wish to stay in, the checkin date and tyhe checkout date. Once they have succesfully booked a room, it displays the total amount.
 if the user has feedback ,inquiries or complaints, there is contact page they can use.
 
 ## Setup
 If you wish to use this webpage, follow these intructions:
-*Clone the remote repository to your local repository
-*Ensure you have a browser that supports the webpage.
-*Ensure you have visual Studio Code with the Live Server extension.
-*Run the webpage via Visual Studio code.
-##Technology used
+* Clone the remote repository to your local repository
+* Ensure you have a browser that supports the webpage.
+* Ensure you have visual Studio Code with the Live Server extension.
+* Run the webpage via Visual Studio code.
+## Technology used
 The webpage was:
-*created in HTML
-*stylized with CSS
-*given functionality with JavaScript
+* created in HTML
+* stylized with CSS
+* given functionality with JavaScript
 
-##Support
+## Support
 If you run in to any issues or have any suggestion, feel free to contact me on email: manthid5@gmail.com
 
-###Licence
+### Licence
 Copyright (c) 2026 Savannah Bookings
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

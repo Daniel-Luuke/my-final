@@ -166,6 +166,6 @@ form button:active{
   width: 100%;
   height: 140px;
   object-fit: cover;
-  background: #eee; /* placeholder look */
+  background: #eee;
   border-radius: 8px;
 }

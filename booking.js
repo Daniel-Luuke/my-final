@@ -1,42 +1,59 @@
-
-// hotel options
 const hotels = {
-  domestic: ["Nairobi Serena", "Sarova Stanley", "Voyager Beach Resort"],
-  international: ["Hilton Paris", "Marriott New York", "Burj Al Arab Dubai"],
+  domestic: [
+    { name: "Nairobi Serena", price: 20000 },
+    { name: "Sarova Stanley", price: 28000 },
+    { name: "Voyager Beach Resort", price: 30000 },
+  ],
+  international: [
+    { name: "Hilton Paris", price: 60000 },
+    { name: "Marriott New York", price: 75000 },
+    { name: "Burj Al Arab Dubai", price: 150000 },
+  ],
 };
 
 function updateHotels() {
   let type = document.getElementById("hotelType").value;
-
   let select = document.getElementById("hotelSelect");
 
   select.innerHTML = '<option value="">--Select a hotel--</option>';
 
-  let selectedHotels = [];
+  if (!type) return;
 
-  if (type === "domestic") {
-    selectedHotels = hotels.domestic;
-  } else if (type === "international") {
-    selectedHotels = hotels.international;
-  } else {
-    return;
-  }
+  let selectedHotels = hotels[type];
 
   selectedHotels.forEach((hotel) => {
     let option = document.createElement("option");
-    option.value = hotel;
-    option.text = hotel;
+    option.value = hotel.name;
+    option.text = `${hotel.name} - KSh ${hotel.price}`;
+    option.dataset.price = hotel.price;
     select.appendChild(option);
   });
 }
 
 function bookHotel(event) {
-event.preventDefault();
+  event.preventDefault();
 
   let type = document.getElementById("hotelType").value;
-  let hotel = document.getElementById("hotelSelect").value;
+
+  let hotelSelect = document.getElementById("hotelSelect");
+  let selectedOption = hotelSelect.options[hotelSelect.selectedIndex];
+
+  let hotel = selectedOption.value;
+
+  if (!selectedOption || !selectedOption.value) {
+    document.getElementById("message").innerText = "Please select a hotel.";
+    return;
+  }
+
+  let price = selectedOption.dataset.price;
+
   let checkin = document.getElementById("checkin").value;
   let checkout = document.getElementById("checkout").value;
+
+  if (!hotel) {
+    document.getElementById("message").innerText = "Please select a hotel.";
+    return;
+  }
 
   if (!checkin || !checkout) {
     document.getElementById("message").innerText = "Please select both dates.";
@@ -49,17 +66,26 @@ event.preventDefault();
     return;
   }
 
+  let nights = Math.round(
+    (new Date(checkout) - new Date(checkin)) / (1000 * 60 * 60 * 24),
+  );
+
+  let total = price * nights;
+
+  document.getElementById("priceBreakdown").innerText =
+    `Nights: ${nights}, Total: KSh ${total}`;
+
   const booking = {
     type,
     hotel,
+    price: Number(price),
+    nights,
     checkin,
     checkout,
   };
 
   localStorage.setItem("booking", JSON.stringify(booking));
 
-  document.getElementById("message").innerText = "Booking successful!";
+  document.getElementById("message").innerText =
+    "Booking successful!";
 }
-
-
-console.log("HOTELS OBJECT:", hotels);

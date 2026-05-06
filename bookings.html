@@ -28,9 +28,10 @@
       </nav>
    </header> 
 
-    <!-- Hotel Type Selection -->
+   <form>
+     <!-- Hotel Type -->
     <label>Select Hotel Type:</label>
-    <select id="hotelType" onchange="showHotels()">
+    <select id="hotelType" onchange="updateHotels()">
         <option value="">--Choose--</option>
         <option value="domestic">Domestic</option>
         <option value="international">International</option>
@@ -38,25 +39,11 @@
 
     <br><br>
 
-    <!-- Domestic Hotels -->
-    <div id="domesticHotels" class="hidden">
-        <label>Select Domestic Hotel:</label>
-        <select>
-            <option>Nairobi Serena</option>
-            <option>Sarova Stanley</option>
-            <option>Voyager Beach Resort</option>
-        </select>
-    </div>
-
-    <!-- International Hotels -->
-    <div id="internationalHotels" class="hidden">
-        <label>Select International Hotel:</label>
-        <select>
-            <option>Hilton Paris</option>
-            <option>Marriott New York</option>
-            <option>Burj Al Arab Dubai</option>
-        </select>
-    </div>
+    <!-- Single Hotel Dropdown -->
+    <label>Select Hotel:</label>
+    <select id="hotelSelect">
+        <option value="">--Select a hotel--</option>
+    </select>
 
     <br><br>
 
@@ -75,8 +62,8 @@
     <button onclick="bookHotel()">Book Now</button>
 
     <p id="message"></p>
+    <form action="">
 
-    <!-- Link external JS -->
     <script src="booking.js"></script>
 
 </body>

@@ -1,3 +1,29 @@
+// Arrays for hotels
+const domesticHotels = [
+  "Nairobi Serena",
+  "Sarova Stanley",
+  "Voyager Beach Resort",
+];
+
+const internationalHotels = [
+  "Hilton Paris",
+  "Marriott New York",
+  "Burj Al Arab Dubai",
+];
+
+// Function to populate dropdown
+function populateDropdown(selectId, hotels) {
+  let select = document.getElementById(selectId);
+  select.innerHTML = ""; // clear previous options
+
+  hotels.forEach((hotel) => {
+    let option = document.createElement("option");
+    option.text = hotel;
+    option.value = hotel;
+    select.appendChild(option);
+  });
+}
+
 function showHotels() {
   let type = document.getElementById("hotelType").value;
 
@@ -5,8 +31,10 @@ function showHotels() {
   document.getElementById("internationalHotels").classList.add("hidden");
 
   if (type === "domestic") {
+    populateDropdown("domesticSelect", domesticHotels);
     document.getElementById("domesticHotels").classList.remove("hidden");
   } else if (type === "international") {
+    populateDropdown("internationalSelect", internationalHotels);
     document.getElementById("internationalHotels").classList.remove("hidden");
   }
 }

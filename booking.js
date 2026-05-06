@@ -4,19 +4,6 @@ const hotels = {
   international: ["Hilton Paris", "Marriott New York", "Burj Al Arab Dubai"],
 };
 
-// Function to populate dropdown
-function populateDropdown(selectId, hotels) {
-  let select = document.getElementById(selectId);
-  select.innerHTML = ""; // clear previous options
-
-  hotels.forEach((hotel) => {
-    let option = document.createElement("option");
-    option.text = hotel;
-    option.value = hotel;
-    select.appendChild(option);
-  });
-}
-
 function updateHotels() {
   let type = document.getElementById("hotelType").value;
   let select = document.getElementById("hotelSelect");
@@ -31,6 +18,7 @@ function updateHotels() {
     selectedHotels = hotels.international;
   } else {
     return;
+    populateDropdown("hotelSelect", hotels[type]);
   }
 
   selectedHotels.forEach((hotel) => {

@@ -45,13 +45,19 @@ function bookHotel(event) {
     return;
   }
 
-  let price = selectedOption.dataset.price;
+  let price = Number(selectedOption.dataset.price);
+  let people = Number(document.getElementById("people").value);
 
   let checkin = document.getElementById("checkin").value;
   let checkout = document.getElementById("checkout").value;
 
   if (!hotel) {
     document.getElementById("message").innerText = "Please select a hotel.";
+    return;
+  }
+
+  if (!people || people < 1) {
+    document.getElementById("message").innerText = "Please enter a valid number of people.";
     return;
   }
 
@@ -70,15 +76,16 @@ function bookHotel(event) {
     (new Date(checkout) - new Date(checkin)) / (1000 * 60 * 60 * 24),
   );
 
-  let total = price * nights;
+  let total = price * nights * people;
 
   document.getElementById("priceBreakdown").innerText =
-    `Nights: ${nights}, Total: KSh ${total}`;
+    `Nights: ${nights}, People: ${people}, Total: KSh ${total}`;
 
   const booking = {
     type,
     hotel,
     price: Number(price),
+    people,
     nights,
     checkin,
     checkout,

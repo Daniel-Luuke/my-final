@@ -62,7 +62,7 @@ function bookHotel(event) {
 
   if (checkin >= checkout) {
     document.getElementById("message").innerText =
-      "Check-out must be after check-in.";
+      "Check-out date must be after check-in date.";
     return;
   }
 

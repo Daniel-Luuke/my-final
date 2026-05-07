@@ -6,8 +6,8 @@
 #### By Daniel Mungaithi
 
 ## Description
-This website is an example of a hotel booking website where a user can view the available hotels. once they make a choice, they go to the booking webpage where they enter the hotel they wish to stay in, the checkin date and tyhe checkout date. Once they have succesfully booked a room, it displays the total amount.
-if the user has feedback ,inquiries or complaints, there is contact page they can use.
+This website is an example of a hotel booking website where a user can view the available hotels and once they make a choice, they can go to the booking webpage where they enter the hotel they wish to stay in, the checkin date and the checkout date. Once they have succesfully booked a room, it displays the total amount.
+If the user has feedback, inquiries or complaints, there is contact page they can use.
 
 ## Setup
 If you wish to use this webpage, follow these intructions:
